@@ -5,6 +5,7 @@ function App() {
   const [selectedPokedex, setSelectedPokedex] = useState(null);
 
   /***
+   * hello world
    * TODO #1 - create a helper function that will take in a pokedex
    * name as a string and update the selectedPokedex hook with
    * the new value.
