@@ -4,11 +4,15 @@ import PokedexList from "./PokedexList";
 function App() {
   const [selectedPokedex, setSelectedPokedex] = useState(null);
 
+  function newPokedex(pokedexName) {
+    setSelectedPokedex(pokedexName);
+  }
+
   /***
-   * hello world
+   *
    * TODO #1 - create a helper function that will take in a pokedex
    * name as a string and update the selectedPokedex hook with
-   * the new value.
+   * the new value. - done!
    *
    * Named: selectPokedex
    *
@@ -33,9 +37,9 @@ function App() {
      * Please look at this example from typerace on how to do that!
      * pst. chooseSnippet
      *
-     * <SnippetSelector films={films} chooseSnippet={chooseSnippet} />
+     * <PokedexList newPokedex={newPokedex} />
      */
-    return <PokedexList />;
+    return <PokedexList newPokedex={newPokedex} />;
   }
 
   return (
