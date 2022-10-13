@@ -1,22 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Pokedex } from "pokeapi-js-wrapper";
 
-/***
- * TODO #3 - update the function signature to have props
- *
- * Please look at this example from typerace on how to do that!
- *
- * function SnippetSelector(props) { ... }
- */
 function PokedexList(props) {
   const { newPokedex } = props;
-  /***
-   * TODO #4 - pull out of the new prop selectPokedex from the param
-   *
-   * Please look at this example from typerace on how to do that!
-   *
-   * const { films, chooseSnippet } = props;
-   */
+
   const [hasError, setErrors] = useState(null);
   const [pokedexes, setPokedexes] = useState([]);
 
@@ -40,7 +27,6 @@ function PokedexList(props) {
   function renderPokdexes() {
     return pokedexes.map((pokedexData) => {
       const { name } = pokedexData;
-       
 
       return (
         <li>

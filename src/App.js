@@ -1,45 +1,24 @@
 import { useState } from "react";
 import PokedexList from "./PokedexList";
+import PokemonList from "./PokemonList";
 
 function App() {
   const [selectedPokedex, setSelectedPokedex] = useState(null);
+  const [selectedPokemon, setSelectedPokmon] = useState(null);
 
   function newPokedex(pokedexName) {
     setSelectedPokedex(pokedexName);
   }
-
-  /***
-   *
-   * TODO #1 - create a helper function that will take in a pokedex
-   * name as a string and update the selectedPokedex hook with
-   * the new value. - done!
-   *
-   * Named: selectPokedex
-   *
-   * Please look at this example from typerace on how to do that!
-   *
-   * function chooseSnippet(selectedSnippet) {
-   *   setSnippet(selectedSnippet);
-   *   setGameState({
-   *     ...initialGameState,
-   *     startTime: new Date().getTime(),
-   *   })
-   * }
-   *
-   * change this
-   */
-
+  
+  function newPokemonName(PokemonName) {
+    setSelectedPokmon(PokemonName);
+  }
+  
   if (selectedPokedex === null) {
-    /***
-     * TODO #2 - We need to pass the helper function to this
-     * new component as a prop.
-     *
-     * Please look at this example from typerace on how to do that!
-     * pst. chooseSnippet
-     *
-     * <PokedexList newPokedex={newPokedex} />
-     */
     return <PokedexList newPokedex={newPokedex} />;
+  }
+  if (selectedPokemon == null) {
+    return <PokemonList newPokemon={newPokemonName } pokedexName ={selectedPokedex}/>;
   }
 
   return (
