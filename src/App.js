@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PokedexList from "./PokedexList";
 import PokemonList from "./PokemonList";
+import PokemonDetails from "./Pokemondetails";
 
 function App() {
   const [selectedPokedex, setSelectedPokedex] = useState(null);
@@ -21,12 +22,7 @@ function App() {
     return <PokemonList newPokemon={newPokemonName } pokedexName ={selectedPokedex}/>;
   }
 
-  return (
-    <div className="App">
-      This text will render when you have successfully implemented all the 5
-      different TODOs.
-    </div>
-  );
+  return <PokemonDetails pokemonName={selectedPokemon} />;
 }
 
 export default App;
